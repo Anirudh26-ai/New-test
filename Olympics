@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Text Animation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            overflow: hidden;
+        }
+        
+        .animated-text {
+            font-size: 4em;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            opacity: 0;
+            transform: scale(2) translateX(-50vw);
+            animation: cinematicEffect 4s ease-out forwards;
+        }
+
+        @keyframes cinematicEffect {
+            0% {
+                opacity: 0;
+                transform: scale(2) translateX(-50vw);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2) translateX(10vw);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-text">Sumit</div>
+</body>
+</html>
